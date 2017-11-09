@@ -12,6 +12,7 @@ There are some source codes inspiring to realize the tool:
 * http://www.java2s.com/Code/Java/JNDI-LDAP/LDAPSearch.htm
 * http://www.adamretter.org.uk/blog/entries/LDAPTest.java
 * https://linux.die.net/man/1/ldapsearch
+* https://github.com/perl-ldap/perl-ldap
 
 ... and innumerable answers on a lot of my questions found in Google, 
 StackOverflow and online Java documentation. 
