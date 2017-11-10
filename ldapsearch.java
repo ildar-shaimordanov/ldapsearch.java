@@ -95,15 +95,18 @@ public class ldapsearch {
 
 			while ( names.hasMore() ) {
 				String name = names.next();
+
 				if ( optionNamesOnly ) {
 					System.out.println(name);
-				} else {
-					Attribute attr = attrs.get(name);
-					NamingEnumeration<?> values = attr.getAll();
-					while ( values.hasMore() ) {
-						String value = values.next().toString();
-						System.out.println(name + ": " + value);
-					}
+					continue;
+				}
+
+				Attribute attr = attrs.get(name);
+				NamingEnumeration<?> values = attr.getAll();
+
+				while ( values.hasMore() ) {
+					String value = values.next().toString();
+					System.out.println(name + ": " + value);
 				}
 			}
 
