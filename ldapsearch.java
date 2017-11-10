@@ -102,11 +102,12 @@ public class ldapsearch {
 				}
 
 				Attribute attr = attrs.get(name);
-				NamingEnumeration<?> values = attr.getAll();
+				NamingEnumeration values = attr.getAll();
 
 				while ( values.hasMore() ) {
-					String value = values.next().toString();
-					System.out.println(name + ": " + value);
+					Object value = values.next();
+					System.out.println(name + ": " + 
+						( value == null ? "" : value.toString() ));
 				}
 			}
 
