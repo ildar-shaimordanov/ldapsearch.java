@@ -251,6 +251,9 @@ public class ldapsearch {
 			case "-v":
 				options.put("verbose", true);
 				break;
+			case "-V":
+				printVersion();
+				return false;
 			case "-x":
 				options.put("simple-auth", true);
 				break;
@@ -290,6 +293,10 @@ public class ldapsearch {
 		System.out.println(usage);
 	}
 
+	public static void printVersion() {
+		System.out.println("ldapsearch: java-based ldapsearch");
+	}
+
 	// Since Java 8 String.join() is available
 	public static String joinArray(String delimiter, String[] elements) {
 		if ( elements == null || elements.length == 0 ) {
@@ -327,6 +334,7 @@ public class ldapsearch {
 		+ "\n    -n          show what would be done but don't actually search"
 		+ "\n    -p port     port on ldap server; default is 389"
 		+ "\n    -v          run in verbose mode (diagnostics to standard output)"
+		+ "\n    -V          print version info"
 		+ "\n    -w passwd   bind passwd (for simple authentication)"
 		+ "\n    -x          Simple authentication"
 		+ "\n";
