@@ -287,7 +287,7 @@ public class ldapsearch {
 	}
 
 	public static void printUsage() {
-		System.out.println(joinArray("\n", usage));
+		System.out.println(usage);
 	}
 
 	// Since Java 8 String.join() is available
@@ -303,29 +303,32 @@ public class ldapsearch {
 		return result;
 	}
 
-	public static String[] usage = {
-		"Usage: ldapsearch [options] filter [attributes...]",
-		"where:",
-		"    filter      LDAP search filter; default is " + DEFAULT_SEARCH_FILTER,
-		"    attributes  whitespace-separated list of attributes to retrieve;",
-		"                no attributes means all attributes; default is " + DEFAULT_ATTRIBUTE_FILTER,
-		"Search options:",
-		"    -a deref    one of never, always; default is " + DEFAULT_DEREF_NAME,
-		"    -A          retrieve attribute names only (no values)",
-		"    -b basedn   base dn for search",
-		"    -l time     time limit (in seconds) for search",
-//		"    -L          print entries in LDIF format",
-		"    -s scope    one of base, one, or sub (search scope); default is " + DEFAULT_SCOPE_NAME,
-		"    -z size     size limit (in entries) for search",
-		"Common options:",
-//		"    -d level    set LDAP debugging level to 'level'",
-		"    -D binddn   bind dn",
-		"    -h host     ldap server; default is localhost",
-		"    -n          show what would be done but don't actually search;",
-		"    -p port     port on ldap server; default is 389",
-		"    -v          run in verbose mode (diagnostics to standard output)",
-		"    -w passwd   bind passwd (for simple authentication)",
-		"    -x          Simple authentication",
-	};
+	public static String usage = "Usage:"
+		+ "\n    ldapsearch [options] filter [attributes...]"
+		+ "\n"
+		+ "\nwhere:"
+		+ "\n    filter      LDAP search filter; default is " + DEFAULT_SEARCH_FILTER
+		+ "\n    attributes  whitespace-separated list of attributes to retrieve;"
+		+ "\n                no attributes means all attributes; default is " + DEFAULT_ATTRIBUTE_FILTER
+		+ "\n"
+		+ "\nSearch options:"
+		+ "\n    -a deref    one of never, always; default is " + DEFAULT_DEREF_NAME
+		+ "\n    -A          retrieve attribute names only (no values)"
+		+ "\n    -b basedn   base dn for search"
+		+ "\n    -l time     time limit (in seconds) for search"
+//		+ "\n    -L          print entries in LDIF format"
+		+ "\n    -s scope    one of base, one, or sub (search scope); default is " + DEFAULT_SCOPE_NAME
+		+ "\n    -z size     size limit (in entries) for search"
+		+ "\n"
+		+ "\nCommon options:"
+//		+ "\n    -d level    set LDAP debugging level to 'level'"
+		+ "\n    -D binddn   bind dn"
+		+ "\n    -h host     ldap server; default is localhost"
+		+ "\n    -n          show what would be done but don't actually search"
+		+ "\n    -p port     port on ldap server; default is 389"
+		+ "\n    -v          run in verbose mode (diagnostics to standard output)"
+		+ "\n    -w passwd   bind passwd (for simple authentication)"
+		+ "\n    -x          Simple authentication"
+		+ "\n";
 
 }
