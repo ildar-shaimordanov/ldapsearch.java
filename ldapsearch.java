@@ -294,7 +294,7 @@ public class ldapsearch {
 	}
 
 	public static void printVersion() {
-		System.out.println("ldapsearch: java-based ldapsearch");
+		System.out.println(version);
 	}
 
 	// Since Java 8 String.join() is available
@@ -309,6 +309,10 @@ public class ldapsearch {
 		}
 		return result;
 	}
+
+	public static String version = "ldapsearch: java-based ldapsearch"
+		+ "\nhttps://github.com/ildar-shaimordanov/ldapsearch.java"
+		+ "\n";
 
 	public static String usage = "Usage:"
 		+ "\n    ldapsearch [options] filter [attributes...]"
