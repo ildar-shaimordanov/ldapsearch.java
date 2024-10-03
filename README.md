@@ -17,6 +17,10 @@ There are some source codes inspiring to realize the tool:
 ... and innumerable answers on a lot of my questions found in Google, 
 StackOverflow and online Java documentation. 
 
+The following link was found significantly later:
+
+* https://docs.ldap.com/ldap-sdk/docs/examples/
+
 The tool doesn't use any external Java libraries. It supports some of 
 frequently used options of the ldapsearch utility. All you need is to 
 compile the source once and run with options specific to your environment:
